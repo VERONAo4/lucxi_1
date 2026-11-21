@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LUCXI — Fashion Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section id="intro" class="intro-screen">
+    <div class="intro-content">
+      <p class="eyebrow">FASHION · STREETWEAR · LIFESTYLE</p>
+      <h1 class="intro-logo">LUCXI</h1>
+      <p class="intro-tagline">STYLE THAT MOVES YOU.</p>
+      <button class="btn btn-accent" onclick="enterStore()">ENTER THE STORE ↗</button>
+    </div>
+  </section>
+
+
+  <div id="store" class="store hidden">
+    <header class="site-header">
+      <div class="header-main">
+        <button class="logo" onclick="goHome()">LUCXI</button>
+        <nav class="navigation" aria-label="Categories">
+          <button onclick="showCategory('All')">NEW IN</button>
+          <button onclick="showCategory('Men')">MEN</button>
+          <button onclick="showCategory('Women')">WOMEN</button>
+          <button onclick="showCategory('Shoes')">SHOES</button>
+          <button onclick="showCategory('Accessories')">ACCESSORIES</button>
+        </nav>
+        <div class="header-actions">
+          <input id="search" class="search" type="search" placeholder="Search fashion…" oninput="renderHome()" aria-label="Search products">
+          <button class="icon-btn" onclick="showPage('wishlist')" title="Wishlist">♡</button>
+          <button class="bag-btn" onclick="showPage('cart')">BAG <span id="bag-count">0</span></button>
+          <button class="admin-btn" onclick="showPage('admin')">ADMIN</button>
+        </div>
+      </div>
+    </header>
+    <main id="content"></main>
+    <footer class="footer">
+      <div class="footer-logo">LUCXI</div>
+      <p>Style that moves you.</p>
+      <p>Fashion · Streetwear · Lifestyle</p>
+      <small>© 2026 LUCXI — Demo storefront</small>
+    </footer>
+  </div>
+  <div id="toast" class="toast hidden" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
